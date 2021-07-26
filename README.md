@@ -5,8 +5,8 @@ A chatbot is an application that can initiate and continue a conversation using 
 The goal here is to build a chatbot which can answer queries related to the COVID-19 disease.  
 Technical stack:  
 o	Python  
-o	Rasa X
-
+o	Rasa X  
+I have also integrated this bot with<b> Telegram</b>
 
 ## Documentation
 
