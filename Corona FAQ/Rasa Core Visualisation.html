@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Rasa Core Visualisation</title>
+    <script src="./Rasa Core Visualisation_files/dagre-d3.min.js.download"></script>
+    <script src="./Rasa Core Visualisation_files/dagre.min.js.download"></script>
+    <script src="./Rasa Core Visualisation_files/d3.v4.js.download"></script>
+    <script src="./Rasa Core Visualisation_files/graphlib-dot.js.download"></script>
+</head>
+<body>
+<div id="errormsg" style="color: #b00"></div>
+<svg>
+    <style id="graph-style">
+        .node.invisible &gt; rect {
+            display: none;
+        }
+
+        .node.start &gt; rect {
+            fill: #7f7;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node.end &gt; rect {
+            fill: #f77;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node:not(.active) &gt; rect, .node:not(.active) &gt; .label {
+            opacity: 0.4;
+        }
+
+        .edgePath:not(.active) path {
+            opacity: 0.4;
+        }
+
+        .node.ellipsis &gt; rect {
+            fill: #CCC;
+        }
+
+        .node.intent &gt; rect {
+            fill: #7ff;
+        }
+
+        .node.dashed &gt; rect {
+            stroke-dasharray: 5;
+        }
+
+        text {
+            font-weight: 300;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serf, serif;
+            font-size: 14px;
+            color: #1f1d1d;
+        }
+
+        .node rect {
+            stroke: #444;
+            fill: #fff;
+            stroke-width: 1.5px;
+        }
+
+        .edgePath path {
+            stroke: #333;
+            stroke-width: 1.5px;
+        }
+
+        svg {
+            position: fixed;
+            top: 10px;
+            left: 0;
+            height: 100%;
+            width: 100%
+        }
+    </style>
+    <g transform="translate(-163,134) scale(1)"><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M701.5859375,40.09042174485546L64.3125,81.015625L64.3125,106.015625" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead41)" style="fill: none;"></path><defs><marker id="arrowhead41" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M701.5859375,40.687288233373856L213.4921875,81.015625L213.4921875,106.015625" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead42)" style="fill: none;"></path><defs><marker id="arrowhead42" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M701.5859375,41.856504555523216L371.625,81.015625L371.625,106.015625" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead43)" style="fill: none;"></path><defs><marker id="arrowhead43" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M701.5859375,45.26435382540038L541.8125,81.015625L541.8125,106.015625" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead44)" style="fill: none;"></path><defs><marker id="arrowhead44" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M734.015625,56.015625L734.015625,81.015625L734.015625,106.015625" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead45)" style="fill: none;"></path><defs><marker id="arrowhead45" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M766.4453125,43.48943340664149L988.453125,81.015625L988.453125,106.015625" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead46)" style="fill: none;"></path><defs><marker id="arrowhead46" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M766.4453125,40.62265020816856L1267.40625,81.015625L1267.40625,106.015625" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead47)" style="fill: none;"></path><defs><marker id="arrowhead47" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M766.4453125,39.72199671914908L1547.65625,81.015625L1547.65625,106.015625" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead48)" style="fill: none;"></path><defs><marker id="arrowhead48" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M766.4453125,39.278618935610965L1831.53125,81.015625L1831.53125,106.015625" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead49)" style="fill: none;"></path><defs><marker id="arrowhead49" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M64.3125,228.046875L64.3125,253.046875L709.0859375,294.45372240717086" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead50)" style="fill: none;"></path><defs><marker id="arrowhead50" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M213.4921875,228.046875L213.4921875,253.046875L709.0859375,293.9948929769463" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead51)" style="fill: none;"></path><defs><marker id="arrowhead51" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M371.625,228.046875L371.625,253.046875L709.0859375,293.09608081506275" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead52)" style="fill: none;"></path><defs><marker id="arrowhead52" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M541.8125,228.046875L541.8125,253.046875L709.0859375,290.47636339271196" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead53)" style="fill: none;"></path><defs><marker id="arrowhead53" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M734.015625,228.046875L734.015625,253.046875L734.015625,278.046875" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead54)" style="fill: none;"></path><defs><marker id="arrowhead54" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M988.453125,228.046875L988.453125,253.046875L758.9453125,291.84079872305637" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead55)" style="fill: none;"></path><defs><marker id="arrowhead55" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M1267.40625,228.046875L1267.40625,253.046875L758.9453125,294.0445821936242" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead56)" style="fill: none;"></path><defs><marker id="arrowhead56" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M1547.65625,228.046875L1547.65625,253.046875L758.9453125,294.73694193427974" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead57)" style="fill: none;"></path><defs><marker id="arrowhead57" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M1831.53125,228.046875L1831.53125,253.046875L758.9453125,295.07777992687676" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead58)" style="fill: none;"></path><defs><marker id="arrowhead58" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M64.3125,142.03125L64.3125,167.03125L64.3125,192.03125" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead59)" style="fill: none;"></path><defs><marker id="arrowhead59" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M213.4921875,142.03125L213.4921875,167.03125L213.4921875,192.03125" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead60)" style="fill: none;"></path><defs><marker id="arrowhead60" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M371.625,142.03125L371.625,167.03125L371.625,192.03125" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead61)" style="fill: none;"></path><defs><marker id="arrowhead61" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M541.8125,142.03125L541.8125,167.03125L541.8125,192.03125" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead62)" style="fill: none;"></path><defs><marker id="arrowhead62" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M734.015625,142.03125L734.015625,167.03125L734.015625,192.03125" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead63)" style="fill: none;"></path><defs><marker id="arrowhead63" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M988.453125,142.03125L988.453125,167.03125L988.453125,192.03125" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead64)" style="fill: none;"></path><defs><marker id="arrowhead64" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M1267.40625,142.03125L1267.40625,167.03125L1267.40625,192.03125" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead65)" style="fill: none;"></path><defs><marker id="arrowhead65" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M1547.65625,142.03125L1547.65625,167.03125L1547.65625,192.03125" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead66)" style="fill: none;"></path><defs><marker id="arrowhead66" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M1831.53125,142.03125L1831.53125,167.03125L1831.53125,192.03125" marker-end="url(file:///D:/Projects/Rasa%20NLU/FAQ-RASA-NLU-master/code/graph.html#arrowhead67)" style="fill: none;"></path><defs><marker id="arrowhead67" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><text><tspan space="preserve" dy="1em" x="1"></tspan></text></g></g></g><g class="nodes"><g class="node start active" transform="translate(734.015625,38.0078125)" style="opacity: 1;"><rect rx="0" ry="0" x="-32.4296875" y="-18.0078125" width="64.859375" height="36.015625" class="label-container" style="filled"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-22.4296875,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">START</tspan></text></g></g></g><g class="node" transform="translate(64.3125,210.0390625)" style="opacity: 1;"><rect rx="0" ry="0" x="-44.3125" y="-18.0078125" width="88.625" height="36.015625" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-34.3125,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">utter_greet</tspan></text></g></g></g><g class="node" transform="translate(213.4921875,210.0390625)" style="opacity: 1;"><rect rx="0" ry="0" x="-54.8671875" y="-18.0078125" width="109.734375" height="36.015625" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-44.8671875,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">utter_goodbye</tspan></text></g></g></g><g class="node" transform="translate(371.625,210.0390625)" style="opacity: 1;"><rect rx="0" ry="0" x="-53.265625" y="-18.0078125" width="106.53125" height="36.015625" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-43.265625,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">utter_iamabot</tspan></text></g></g></g><g class="node" transform="translate(541.8125,210.0390625)" style="opacity: 1;"><rect rx="0" ry="0" x="-66.921875" y="-18.0078125" width="133.84375" height="36.015625" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-56.921875,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">utter_corona_intro</tspan></text></g></g></g><g class="node" transform="translate(734.015625,210.0390625)" style="opacity: 1;"><rect rx="0" ry="0" x="-74.6015625" y="-18.0078125" width="149.203125" height="36.015625" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-64.6015625,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">utter_corona_spread</tspan></text></g></g></g><g class="node" transform="translate(988.453125,210.0390625)" style="opacity: 1;"><rect rx="0" ry="0" x="-92.1171875" y="-18.0078125" width="184.234375" height="36.015625" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-82.1171875,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">utter_corona_food_spread</tspan></text></g></g></g><g class="node" transform="translate(1267.40625,210.0390625)" style="opacity: 1;"><rect rx="0" ry="0" x="-74.28125" y="-18.0078125" width="148.5625" height="36.015625" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-64.28125,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">utter_warm_weather</tspan></text></g></g></g><g class="node" transform="translate(1547.65625,210.0390625)" style="opacity: 1;"><rect rx="0" ry="0" x="-56.4140625" y="-18.0078125" width="112.828125" height="36.015625" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-46.4140625,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">utter_high_risk</tspan></text></g></g></g><g class="node" transform="translate(1831.53125,210.0390625)" style="opacity: 1;"><rect rx="0" ry="0" x="-94.5546875" y="-18.0078125" width="189.109375" height="36.015625" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-84.5546875,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">utter_corona_vaccine_intro</tspan></text></g></g></g><g class="node intent" transform="translate(64.3125,124.0234375)" style="opacity: 1;"><rect rx="0" ry="0" x="-24.140625" y="-18.0078125" width="48.28125" height="36.015625" class="label-container" style="filled"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-14.140625,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">/hey</tspan></text></g></g></g><g class="node intent" transform="translate(213.4921875,124.0234375)" style="opacity: 1;"><rect rx="0" ry="0" x="-36.96875" y="-18.0078125" width="73.9375" height="36.015625" class="label-container" style="filled"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-26.96875,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">goodbye</tspan></text></g></g></g><g class="node intent" transform="translate(371.625,124.0234375)" style="opacity: 1;"><rect rx="0" ry="0" x="-54.8671875" y="-18.0078125" width="109.734375" height="36.015625" class="label-container" style="filled"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-44.8671875,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">are you a bot?</tspan></text></g></g></g><g class="node intent" transform="translate(541.8125,124.0234375)" style="opacity: 1;"><rect rx="0" ry="0" x="-50.484375" y="-18.0078125" width="100.96875" height="36.015625" class="label-container" style="filled"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-40.484375,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">what is covid</tspan></text></g></g></g><g class="node intent" transform="translate(734.015625,124.0234375)" style="opacity: 1;"><rect rx="0" ry="0" x="-91.71875" y="-18.0078125" width="183.4375" height="36.015625" class="label-container" style="filled"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-81.71875,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">how does the virus spread</tspan></text></g></g></g><g class="node intent" transform="translate(988.453125,124.0234375)" style="opacity: 1;"><rect rx="0" ry="0" x="-112.71875" y="-18.0078125" width="225.4375" height="36.015625" class="label-container" style="filled"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-102.71875,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">how will corona spread from food</tspan></text></g></g></g><g class="node intent" transform="translate(1267.40625,124.0234375)" style="opacity: 1;"><rect rx="0" ry="0" x="-116.234375" y="-18.0078125" width="232.46875" height="36.015625" class="label-container" style="filled"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-106.234375,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">will warm weather stop the spread</tspan></text></g></g></g><g class="node intent" transform="translate(1547.65625,124.0234375)" style="opacity: 1;"><rect rx="0" ry="0" x="-114.015625" y="-18.0078125" width="228.03125" height="36.015625" class="label-container" style="filled"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-104.015625,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">who is at a higher risk of infection</tspan></text></g></g></g><g class="node intent" transform="translate(1831.53125,124.0234375)" style="opacity: 1;"><rect rx="0" ry="0" x="-119.859375" y="-18.0078125" width="239.71875" height="36.015625" class="label-container" style="filled"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-109.859375,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">which vaccine are available in india</tspan></text></g></g></g><g class="node end" transform="translate(734.015625,296.0546875)" style="opacity: 1;"><rect rx="0" ry="0" x="-24.9296875" y="-18.0078125" width="49.859375" height="36.015625" class="label-container" style="filled"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-14.9296875,-8.0078125)"><text><tspan space="preserve" dy="1em" x="1">END</tspan></text></g></g></g></g></g></g>
+</svg>
+<script>
+
+  function serveGraph() {
+    let oldInputGraphValue;
+
+    const url = 'visualization.dot';
+    const refreshInterval = 500;
+
+    // trigger a refresh by fetching an updated graph
+    setInterval(function () {
+      fetch(url).then(r => r.text()).then(dot => {
+        document.getElementById('errormsg').innerHTML = '';
+        if (oldInputGraphValue === dot) return;
+
+        oldInputGraphValue = dot;
+        drawGraph(dot);
+      }).catch(err => {
+        document.getElementById('errormsg').innerHTML =
+          'Failed to update plot. (' + err.message + ')';
+      });
+    }, refreshInterval);
+  }
+
+  function drawGraph(graph) {
+    let g = graphlibDot.read(graph);
+    // Set margins, if not present
+    if (!g.graph().hasOwnProperty("marginx") &&
+      !g.graph().hasOwnProperty("marginy")) {
+      g.graph().marginx = 20;
+      g.graph().marginy = 20;
+    }
+    g.graph().transition = function (selection) {
+      return selection.transition().duration(300);
+    };
+    // Render the graph into svg g
+    d3.select("svg g").call(render, g);
+  }
+  // Set up zoom support
+  const svg = d3.select("svg"),
+    inner = d3.select("svg g"),
+    zoom = d3.zoom().on("zoom", function () {
+      inner.attr("transform", d3.event.transform);
+    });
+  svg.call(zoom);
+
+  // Create and configure the renderer
+  const render = dagreD3.render();
+
+  let isClient = false;
+  isClient = true;
+
+  if (isClient) {
+    // Mark all nodes and their edges as active
+    cssRules = document.getElementById('graph-style').sheet.cssRules;
+    cssRules[3].style.opacity = 1;
+    cssRules[4].style.opacity = 1;
+
+    let graph;
+    graph = `digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class="", fontsize=12, label=utter_greet];
+2 [class="", fontsize=12, label=utter_goodbye];
+3 [class="", fontsize=12, label=utter_iamabot];
+4 [class="", fontsize=12, label=utter_corona_intro];
+5 [class="", fontsize=12, label=utter_corona_spread];
+6 [class="", fontsize=12, label=utter_corona_food_spread];
+7 [class="", fontsize=12, label=utter_warm_weather];
+8 [class="", fontsize=12, label=utter_high_risk];
+9 [class="", fontsize=12, label=utter_corona_vaccine_intro];
+10 [class=intent, fillcolor=lightblue, label="/hey", shape=rect, style=filled];
+11 [class=intent, fillcolor=lightblue, label=goodbye, shape=rect, style=filled];
+12 [class=intent, fillcolor=lightblue, label="are you a bot?", shape=rect, style=filled];
+13 [class=intent, fillcolor=lightblue, label="what is covid", shape=rect, style=filled];
+14 [class=intent, fillcolor=lightblue, label="how does the virus spread", shape=rect, style=filled];
+15 [class=intent, fillcolor=lightblue, label="how will corona spread from food", shape=rect, style=filled];
+16 [class=intent, fillcolor=lightblue, label="will warm weather stop the spread", shape=rect, style=filled];
+17 [class=intent, fillcolor=lightblue, label="who is at a higher risk of infection", shape=rect, style=filled];
+18 [class=intent, fillcolor=lightblue, label="which vaccine are available in india", shape=rect, style=filled];
+0 -> 10  [class="", key=0];
+0 -> 11  [class="", key=0];
+0 -> 12  [class="", key=0];
+0 -> 13  [class="", key=0];
+0 -> 14  [class="", key=0];
+0 -> 15  [class="", key=0];
+0 -> 16  [class="", key=0];
+0 -> 17  [class="", key=0];
+0 -> 18  [class="", key=0];
+1 -> "-1"  [class="", key=NONE, label=""];
+2 -> "-1"  [class="", key=NONE, label=""];
+3 -> "-1"  [class="", key=NONE, label=""];
+4 -> "-1"  [class="", key=NONE, label=""];
+5 -> "-1"  [class="", key=NONE, label=""];
+6 -> "-1"  [class="", key=NONE, label=""];
+7 -> "-1"  [class="", key=NONE, label=""];
+8 -> "-1"  [class="", key=NONE, label=""];
+9 -> "-1"  [class="", key=NONE, label=""];
+10 -> 1  [class="", key=0];
+11 -> 2  [class="", key=0];
+12 -> 3  [class="", key=0];
+13 -> 4  [class="", key=0];
+14 -> 5  [class="", key=0];
+15 -> 6  [class="", key=0];
+16 -> 7  [class="", key=0];
+17 -> 8  [class="", key=0];
+18 -> 9  [class="", key=0];
+}
+`;
+    drawGraph(graph);
+  } else {
+    serveGraph();
+  }
+
+
+</script>
+
+
+</body></html>
